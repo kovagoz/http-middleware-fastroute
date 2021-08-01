@@ -1,6 +1,6 @@
 <?php
 
-namespace Kovagoz\Http;
+namespace Kovagoz\Http\Middleware\FastRouter;
 
 use FastRoute\Dispatcher;
 use Psr\Http\Message\ResponseFactoryInterface;

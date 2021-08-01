@@ -1,6 +1,6 @@
 <?php
 
-use Kovagoz\Http\FastRouteMiddleware;
+use Kovagoz\Http\Middleware\FastRouter\FastRouteMiddleware;
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
