@@ -1,11 +1,14 @@
 <?php
 
+namespace Test;
+
 use Kovagoz\Http\Middleware\FastRouter\FastRouteMiddleware;
 use Nyholm\Psr7\Factory\Psr17Factory;
+use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
-class FastRouteMiddlewareTest extends \PHPUnit\Framework\TestCase
+class FastRouteMiddlewareTest extends TestCase
 {
     private Psr17Factory          $factory;
     private FastRouteMiddleware   $middleware;
