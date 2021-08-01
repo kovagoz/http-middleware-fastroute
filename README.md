@@ -1,18 +1,9 @@
-# http-middleware-fastroute
+# PSR-15 compatible request router
 
 A [PSR-15](https://www.php-fig.org/psr/psr-15/) compatible HTTP middleware
-to route requests to their proper handler using the
+which finds the proper request handler using the
 [FastRoute](https://github.com/nikic/FastRoute) library.
 
-## Testing
+## Requirements
 
-Required tools:
-
-- Docker
-- GNU Make
-
-Just type:
-
-```sh
-make test
-```
+* PHP 7.4 or above
