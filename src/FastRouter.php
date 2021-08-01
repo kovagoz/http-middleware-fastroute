@@ -10,9 +10,9 @@ use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface as Handler;
 
 /**
- * @see \Test\FastRouteMiddlewareTest
+ * @see \Test\FastRouterTest
  */
-class FastRouteMiddleware implements MiddlewareInterface
+class FastRouter implements MiddlewareInterface
 {
     /**
      * Route handler is stored in this request attribute.

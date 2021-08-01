@@ -2,16 +2,16 @@
 
 namespace Test;
 
-use Kovagoz\Http\Middleware\FastRouter\FastRouteMiddleware;
+use Kovagoz\Http\Middleware\FastRouter\FastRouter;
 use Nyholm\Psr7\Factory\Psr17Factory;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
-class FastRouteMiddlewareTest extends TestCase
+class FastRouterTest extends TestCase
 {
     private Psr17Factory          $factory;
-    private FastRouteMiddleware   $middleware;
+    private FastRouter   $middleware;
 
     public function setUp(): void
     {
@@ -25,7 +25,7 @@ class FastRouteMiddlewareTest extends TestCase
             }
         );
 
-        $this->middleware = new FastRouteMiddleware($dispatcher, $this->factory);
+        $this->middleware = new FastRouter($dispatcher, $this->factory);
     }
 
     public function testNotAllowedRequestMethod(): void
@@ -54,7 +54,7 @@ class FastRouteMiddlewareTest extends TestCase
             ->method('handle')
             ->with(self::callback(
                 function (ServerRequestInterface $request) {
-                    return $request->getAttribute(FastRouteMiddleware::HANDLER_ATTRIBUTE) === 'frontpage';
+                    return $request->getAttribute(FastRouter::HANDLER_ATTRIBUTE) === 'frontpage';
                 }
             ));
 
@@ -71,7 +71,7 @@ class FastRouteMiddlewareTest extends TestCase
             ->method('handle')
             ->with(self::callback(
                 function (ServerRequestInterface $request) {
-                    return $request->getAttribute(FastRouteMiddleware::HANDLER_ATTRIBUTE) === null;
+                    return $request->getAttribute(FastRouter::HANDLER_ATTRIBUTE) === null;
                 }
             ));
 
