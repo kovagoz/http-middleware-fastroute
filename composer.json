@@ -1,6 +1,6 @@
 {
-  "name": "kovagoz/http-middleware-fastroute",
-  "description": "description",
+  "name": "kovagoz/http-middleware-fastrouter",
+  "description": "PSR-15 compatible request router middleware",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
